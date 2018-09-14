@@ -4,6 +4,7 @@ import { PAGES_ROUTES } from './pages.routes';
 import { SharedModule } from '../shared/shared.module';
 
 import { FormsModule} from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 // ng2-charts
 import { ChartsModule} from 'ng2-charts';
@@ -20,8 +21,10 @@ import { AccoutSettingsComponent } from './accout-settings/accout-settings.compo
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
+// Pipe module
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
 
-// Temporal
 
 @NgModule({
     declarations: [
@@ -34,6 +37,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         AccoutSettingsComponent,
         PromesasComponent,
         RxjsComponent,
+        ProfileComponent,
 
     ],
     exports: [
@@ -42,10 +46,12 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         Graficas1Component
     ],
     imports: [
+        CommonModule,
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
-        ChartsModule
+        ChartsModule,
+        PipesModule
 
 
     ]
