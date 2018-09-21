@@ -30,6 +30,7 @@ import { RegisterComponent } from './login/register.component';
     LoginComponent,
     RegisterComponent
 
+
   ],
   imports: [
     BrowserModule,
